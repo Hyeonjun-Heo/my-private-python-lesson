@@ -1,0 +1,59 @@
+HTML은 웹의 뼈대 역할을 합니다. //<html>,<head> 등등,,
+CSS는 웹을 예쁘게,
+JavaScript는 살아있게 하는 역할을합니다.
+
+XPath는 특정 Element의 경로역할을 합니다.
+ex) HTML
+<button id="serach_btn"
+        type="submit"
+        title="검색"
+        class="btn_submit">
+
+XPath 특징(id, class, text)  //*[@id="serach_btn]
+
+XPath는 Element간의 관계도 중요합니다.
+<부모>
+    <자식/>
+    <자식/>
+    <자식/>
+</부모>
+
+Chrome은 개발자 도구가 유용하게 쓰입니다. Ctrl+Shift+j를 누르면 개발자 도구가 생깁니다.
+이걸 이용하여 쉽게 XPath를 copy해서 스크랩핑이 가능합니다.
+
+정규식: 규칙을 가진 문자열을 표현하는 식
+
+.(ca.e)하나의 문자 ex) s가 들어가면 case, v가 들어가면 cave 등등,,
+^(^de)문자열의 시작
+$(se$)문자열의 끝
+
+match() 처음부터 일치하는지
+search() 일치하는 게 있는지
+findall() 일치하는 것 모두 리스트로 반환합니다.
+
+User_Agent
+브라우저가 웹 페이지를 요청할 때 전달하는 헤더의 내용을 바탕으로 사람인지, 어떤페이지를 보여줄지 판단합니다.
+그러나 일반적인 정보가 아닐때에는 서버가 접속을 막거나 권한을 주지 않을 수 있습니다.
+이때, User_Agent를 사용하여 웹 페이지에게 일반적인 정보를 주는 역할을 합니다.
+
+Requests
+웹 페이지(html)을 읽어옵니다. 특징은 빠르고, 동적 웹 페이지는 사용이 불가합니다.
+
+Selenium
+웹 페이지를 자동화 할 수 있는 framework입니다. 특징은 Requests에 비해 느리고, 동적 웹 페이지에도 사용이 가능합니다.
+
+Requests는 주어진 url을 통해 받아온 html에 원하는 정보가 있을 때 사용하면 매우 좋습니다.
+
+Selenium 은 로그인 또는 어떤 결과에 대한 필터링 등 어떤 동작을 해야 하는 경우에 사용하기 적합합니다.
+
+대신 크롬 버전에 맞는 chromedriver.ext가 반드시 있어야 합니다.
+
+BeautifulSoup
+
+find            조건에 맞는 첫 번째 Element
+find_all        조건에 맞는 모든 Element 리스트로 반환
+find_next_sibling(s) 다음 형제 찾기
+find_previous_sibling(s) 이전 형제 찾기
+
+soup["href"]    속성
+soup.get_text() 텍스트
